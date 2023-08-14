@@ -1,6 +1,6 @@
 package effectivejava.chapter2.item8;
 
-import java.lang.ref.Cleaner;
+import java.lang.ref.Cleaner; // requires Java 11+
 
 // An autocloseable class using a cleaner as a safety net (Page 32)
 public class Room implements AutoCloseable {
