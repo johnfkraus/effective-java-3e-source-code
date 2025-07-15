@@ -26,11 +26,16 @@ class PrimitiveTypeUtil {
     WRAPPER_TYPE_MAP.put(Void.class, void.class);
   }
   public static boolean isPrimitiveType(Object source) {
+    //System.out.println("source = " + source + ", " + source.getClass().getName());
     return WRAPPER_TYPE_MAP.containsKey(source.getClass());
   }
   public static void main(String[] args) {
     assertTrue(PrimitiveTypeUtil.isPrimitiveType(false));
     assertTrue(PrimitiveTypeUtil.isPrimitiveType(1L));
     assertFalse(PrimitiveTypeUtil.isPrimitiveType(StringUtils.EMPTY));
+
+    Long l = 2L;
+    System.out.println("is Long l a primitive type? = " + PrimitiveTypeUtil.isPrimitiveType(l));
+
   }
 }
